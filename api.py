@@ -1,7 +1,8 @@
 import requests
 
 
-BASE_URL_AUTH = "http://127.0.0.1:8000/auth/api/"
+# BASE_URL_AUTH = "http://127.0.0.1:8000/auth/api/"
+BASE_URL_AUTH = "https://hisayapi.pythonanywhere.com/auth/api/"
 
 
 def save_data_from_bot(**data):
