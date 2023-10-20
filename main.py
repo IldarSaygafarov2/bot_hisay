@@ -22,6 +22,9 @@ def command_start(message: types.Message):
 def check_phone_from_contact(message: types.Message):
     chat_id = message.chat.id
     phone_number = message.contact.phone_number
+    if not phone_number.startswith("+"):
+        phone_number = f"+{phone_number}"
+
     username = message.from_user.username
     data = api.save_data_from_bot(
         phone_number=phone_number,
